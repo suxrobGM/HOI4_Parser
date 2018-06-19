@@ -41,7 +41,7 @@ namespace HOI4_Parser
         
         public override void Load(string TechTreeFileName)
         {
-            base.buffer = File.ReadAllLines(TechTreeFileName);
+            this.buffer = File.ReadAllLines(TechTreeFileName);
             this.techTreeFileName = TechTreeFileName;
 
             string root_tech_id = String.Empty;
@@ -62,12 +62,9 @@ namespace HOI4_Parser
                                          where a.Contains("leads_to_tech")
                                          select a.Replace(" ", "").Remove(0, a.IndexOf("="));
 
-                tech_id_list = new List<string>(tech_id_collection);
+                tech_id_list = new List<string>(tech_id_collection);                
 
-                // experimental
-                this.techTreeGuiFileName = "countrytechtreeview.gui";
-                //
-
+                //Find root id list the file of countrytechtreeview.gui              
                 string[] gui_file_content = File.ReadAllLines(techTreeGuiFileName);
                 root_id_list = new List<string>();
 
@@ -109,6 +106,8 @@ namespace HOI4_Parser
                         break;
                     }
                 }
+
+                tech_id_list.InsertRange(0, root_id_list);
             }
             else
             {
@@ -117,14 +116,14 @@ namespace HOI4_Parser
         }
 
         /// <summary>
-        /// Get folder name specified of tech tree
+        /// Get folder name of specified tech tree
         /// </summary>
         /// <param name="TechTreeFileName"></param>
         /// <returns>string of folder name</returns>
-        public string GetFolderName(string TechTreeFileName)
+        public static string GetFolderNameOf(string TechTreeFileName)
         {
             string folder_name = String.Empty;
-            this.buffer = File.ReadAllLines(TechTreeFileName);
+            string[] buffer = File.ReadAllLines(TechTreeFileName);
 
             for(var i=0; i<buffer.Length; i++)
             {
