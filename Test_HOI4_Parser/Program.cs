@@ -12,14 +12,17 @@ namespace Test_HOI4_Parser
         static void Main(string[] args)
         {
             General.HOI4_Path = @"G:\CSharp Projects\HOI4_Parser\Test_HOI4_Parser\bin\Debug";
-            TechTree techTree = new TechTree("ammunition.txt");          
+            TechTree techTree = new TechTree("ammunition.txt");
 
+            int count = 0;
             foreach (var tech_id in techTree.TechIDs)
             {
-                Console.WriteLine(tech_id);
+                Console.WriteLine($"{++count}  {tech_id}");
             }
-            
-            
+
+            Console.WriteLine();
+            Console.WriteLine(techTree.GetFolderName());
+
             /*foreach(var root_id in techTree.RootIDs)
             {
                 Console.WriteLine(root_id);

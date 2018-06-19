@@ -59,12 +59,12 @@ namespace HOI4_Parser
             if (isTechFile)
             {
                 var tech_id_collection = from a in buffer
-                                         where a.Contains("leads_to_tech")
+                                         where a.Contains("leads_to_tech") && !a.Trim().StartsWith("#")
                                          select a.Replace(" ", "").Remove(0, a.IndexOf("="));
 
                 tech_id_list = new List<string>(tech_id_collection);                
 
-                //Find root id list the file of countrytechtreeview.gui              
+                //Find root id list in the file of countrytechtreeview.gui              
                 string[] gui_file_content = File.ReadAllLines(techTreeGuiFileName);
                 root_id_list = new List<string>();
 
@@ -109,6 +109,7 @@ namespace HOI4_Parser
                 }
 
                 tech_id_list.InsertRange(0, root_id_list);
+                tech_id_list = tech_id_list.Distinct().ToList(); //delete dublicats
             }
             else
             {
