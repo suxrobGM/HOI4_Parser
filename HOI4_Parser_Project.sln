@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_HOI4_Parser", "Test_HOI4_Parser\Test_HOI4_Parser.csproj", "{3C291CE7-C6B2-4F37-8243-11D3EE3AB859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HOI4_Parser", "HOI4_Parser\HOI4_Parser.csproj", "{DAEA1DA4-3B64-4ABC-8D77-2FD4CD8FDBCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C291CE7-C6B2-4F37-8243-11D3EE3AB859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C291CE7-C6B2-4F37-8243-11D3EE3AB859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C291CE7-C6B2-4F37-8243-11D3EE3AB859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C291CE7-C6B2-4F37-8243-11D3EE3AB859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAEA1DA4-3B64-4ABC-8D77-2FD4CD8FDBCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAEA1DA4-3B64-4ABC-8D77-2FD4CD8FDBCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAEA1DA4-3B64-4ABC-8D77-2FD4CD8FDBCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAEA1DA4-3B64-4ABC-8D77-2FD4CD8FDBCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8E12B94-5902-48E0-8670-840331A7473F}
+	EndGlobalSection
+EndGlobal
