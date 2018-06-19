@@ -11,18 +11,20 @@ namespace Test_HOI4_Parser
     {
         static void Main(string[] args)
         {
-            TechTree techTree = new TechTree("air_doctrine.txt");
+            General.HOI4_Path = @"G:\CSharp Projects\HOI4_Parser\Test_HOI4_Parser\bin\Debug";
+            TechTree techTree = new TechTree("ammunition.txt");          
 
-            /*foreach(var tech_id in techTree.TechIDs)
+            foreach (var tech_id in techTree.TechIDs)
             {
                 Console.WriteLine(tech_id);
             }
-            */
             
-            foreach(var root_id in techTree.RootIDs)
+            
+            /*foreach(var root_id in techTree.RootIDs)
             {
                 Console.WriteLine(root_id);
             }
+            */
 
             Console.ReadLine();
         }

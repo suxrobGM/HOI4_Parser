@@ -94,6 +94,7 @@ namespace HOI4_Parser
                                         string root_id = temp_root_id;                                     
                                         root_id = root_id.Replace(" ", "");
                                         root_id = root_id.Replace("\"", "");
+                                        root_id = root_id.Substring(0, root_id.IndexOf("_tree"));
                                         root_id = root_id.Remove(0, root_id.IndexOf("=") + 1);
                                         root_id_list.Add(root_id);
                                         i = j;
