@@ -19,6 +19,7 @@ namespace HOI4_Parser
         /// </summary>
         public List<string> TechIDs { get => tech_id_list; }
         public List<string> RootIDs { get => root_id_list; }
+        public string FolderName { get => this.GetFolderName(); }
 
         /// <summary>
         /// Initializes a new empty instance of the Tech tree class
@@ -158,7 +159,7 @@ namespace HOI4_Parser
         /// </summary>
         /// <param name="TechTreeFileName"></param>
         /// <returns>string of folder name</returns>
-        public string GetFolderName()
+        private string GetFolderName()
         {
             string folder_name = String.Empty;
 
